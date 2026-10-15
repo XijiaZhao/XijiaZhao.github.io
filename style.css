@@ -286,6 +286,43 @@ a:hover {
   font-weight: 600;
 }
 
+.research-stages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.stage {
+  background: var(--color-surface);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.stage-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.stage p {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.stage .stage-topics {
+  font-size: 0.8rem;
+  color: var(--color-accent-dark);
+  font-weight: 500;
+  margin-top: 8px;
+}
+
 /* ===== Timeline ===== */
 .timeline {
   position: relative;
@@ -349,6 +386,14 @@ a:hover {
   color: var(--color-accent);
   font-weight: 500;
   white-space: nowrap;
+}
+
+.timeline-role {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin: -6px 0 12px;
 }
 
 .timeline-content ul {
@@ -449,6 +494,23 @@ a:hover {
 }
 
 /* ===== Publications ===== */
+.pub-note {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: -16px;
+  margin-bottom: 24px;
+}
+
+.pub-group-title {
+  font-size: 1.05rem;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.publications-list + .pub-group-title {
+  margin-top: 40px;
+}
+
 .publications-list {
   display: flex;
   flex-direction: column;
@@ -475,8 +537,9 @@ a:hover {
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-accent);
-  min-width: 48px;
+  min-width: 60px;
   padding-top: 2px;
+  white-space: nowrap;
 }
 
 .pub-authors {
@@ -646,6 +709,10 @@ a:hover {
   .hero-links {
     flex-direction: column;
     align-items: center;
+  }
+
+  .research-stages {
+    grid-template-columns: 1fr;
   }
 
   .projects-grid {
